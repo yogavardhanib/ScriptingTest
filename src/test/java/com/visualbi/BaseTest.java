@@ -54,29 +54,32 @@ public class BaseTest extends FluentTestNg {
         goTo(VBIConfig.URL_PATH);
         page.setter1().click();
 
-        page.textTextChartType().clear();
         //line
+        page.textTextChartType().clear();
         page.textTextChartType().sendKeys("line");//sendKeys("line");
         page.DSXSetChartType.click();
         Thread.sleep(5000);
-        String enteredtext = page.textTextChartType().getAttribute("value");
-        page.lineChartType().isDisplayed();
+        String enteredtext1 = page.textTextChartType().getAttribute("value");
+        Assert.assertTrue(page.lineChartType().isDisplayed());
 
         page.getter1().click();
         page.DSXGetChartType.click();
         Thread.sleep(5000);
-        Assert.assertEquals(page.result().getText(),enteredtext);
+        Assert.assertEquals(page.result().getText(),"DSXGetChartType : "+enteredtext1);
 
         //spline
+        page.setter1().click();
         page.textTextChartType().clear();
         page.textTextChartType().sendKeys("spline");//sendKeys("line");
         page.DSXSetChartType.click();
-        Thread.sleep(5000);
-        page.splineChartType().isDisplayed();
+                Thread.sleep(5000);
+        String enteredtext2 = page.textTextChartType().getAttribute("value");
+        Assert.assertTrue(page.splineChartType().isDisplayed());
+
         page.getter1().click();
         page.DSXGetChartType.click();
         Thread.sleep(5000);
-        Assert.assertEquals(page.result().getText(),enteredtext);
+        Assert.assertEquals(page.result().getText(),"DSXGetChartType : "+enteredtext2);
 
     }
 

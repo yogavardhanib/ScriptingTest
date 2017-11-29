@@ -40,10 +40,7 @@ public class BaseTest extends FluentTestNg {
         ((JavascriptExecutor)driver).executeScript("$('#PAGEBOOK_2_tf1-arrowScrollLeft').click();");
     }
 
-    public void previouspage1()
-    {
-        ((JavascriptExecutor)driver).executeScript("$('#PAGEBOOK_2_tf1-arrowScrollLeft').click();");
-    }
+  
 
 
     public void generatetooltip() {

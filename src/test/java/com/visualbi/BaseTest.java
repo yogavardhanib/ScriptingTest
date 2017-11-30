@@ -3,6 +3,7 @@ package com.visualbi;
 /**
  * Created by yogavb on 11/29/2017.
  */
+
 import org.fluentlenium.adapter.testng.FluentTestNg;
 import org.fluentlenium.core.annotation.Page;
 import org.openqa.selenium.By;
@@ -30,17 +31,13 @@ public class BaseTest extends FluentTestNg {
         return driver;
     }
 
-    public void nextpage()
-    {
-        ((JavascriptExecutor)driver).executeScript("$('#PAGEBOOK_2_tf1-arrowScrollRight').click();");
+    public void nextpage() {
+        ((JavascriptExecutor) driver).executeScript("$('#PAGEBOOK_2_tf1-arrowScrollRight').click();");
     }
 
-    public void previouspage()
-    {
-        ((JavascriptExecutor)driver).executeScript("$('#PAGEBOOK_2_tf1-arrowScrollLeft').click();");
+    public void previouspage() {
+        ((JavascriptExecutor) driver).executeScript("$('#PAGEBOOK_2_tf1-arrowScrollLeft').click();");
     }
-
-  
 
 
     public void generatetooltip() {
@@ -65,21 +62,21 @@ public class BaseTest extends FluentTestNg {
         page.getter1().click();
         page.DSXGetChartType.click();
         Thread.sleep(5000);
-        Assert.assertEquals(page.result().getText(),"DSXGetChartType : "+enteredtext1);
+        Assert.assertEquals(page.result().getText(), "DSXGetChartType : " + enteredtext1);
 
         //spline
         page.setter1().click();
         page.textTextChartType().clear();
         page.textTextChartType().sendKeys("spline");//sendKeys("line");
         page.DSXSetChartType.click();
-                Thread.sleep(5000);
+        Thread.sleep(5000);
         String enteredtext2 = page.textTextChartType().getAttribute("value");
         Assert.assertTrue(page.splineChartType().isDisplayed());
 
         page.getter1().click();
         page.DSXGetChartType.click();
         Thread.sleep(5000);
-        Assert.assertEquals(page.result().getText(),"DSXGetChartType : "+enteredtext2);
+        Assert.assertEquals(page.result().getText(), "DSXGetChartType : " + enteredtext2);
 
     }
 
@@ -94,20 +91,20 @@ public class BaseTest extends FluentTestNg {
         page.textTitleEnable().clear();
         page.textTitleEnable().sendKeys("true");
         page.dsxSetTitleEnable().click();
+        Thread.sleep(5000);
+        String eneteredTitleEnable = page.textTitleEnable().getAttribute("value");
+
+        page.textTitleText().clear();
+        page.textTitleText().sendKeys("Chart");
         page.dsxSetTitleText().click();
         Thread.sleep(5000);
-        String eneteredtext = page.textTitleEnable().getAttribute("value");
         String titletext = page.title().getText();
-
-        Assert.assertEquals(titletext,page.textTitleText().getAttribute("value"));
+        Assert.assertEquals(titletext, page.textTitleText().getAttribute("value"));
 
         page.getter1().click();
         page.dsxGetTitleEnable().click();
-
-        // Assert.assertEquals(page.result().getText(),"DSXGetTitleEnable : "+eneteredtext); // Ignore Case
-        assertTrue(page.result().getText().equalsIgnoreCase("DSXGetTitleEnable : "+eneteredtext));
-
-
+        Thread.sleep(5000);
+        assertTrue(page.result().getText().equalsIgnoreCase("DSXGetTitleEnable : " + eneteredTitleEnable));
 
         // Enable = false
         page.setter1().click();
@@ -115,13 +112,17 @@ public class BaseTest extends FluentTestNg {
         page.textTitleEnable().sendKeys("false");
         page.dsxSetTitleEnable().click();
         Thread.sleep(5000);
+        String eneteredTitleEnable2 = page.textTitleEnable().getAttribute("value");
 
-        Assert.assertEquals(titletext,"");
+        page.dsxSetTitleText().click();
+        Thread.sleep(5000);
+        String titletext2 = page.title().getText();
+        Assert.assertEquals(titletext2, "");
 
         page.getter1().click();
         page.dsxGetTitleEnable().click();
-        Assert.assertEquals(page.result().getText(),"DSXGetTitleEnable : "+eneteredtext);
-
+        Thread.sleep(5000);
+        assertTrue(page.result().getText().equalsIgnoreCase("DSXGetTitleEnable : " + eneteredTitleEnable2));
 
     }
 
@@ -137,12 +138,12 @@ public class BaseTest extends FluentTestNg {
         String enteredtitle = page.textTitleText().getAttribute("value");
         Thread.sleep(5000);
         String titletext = page.title().getText();
-        Assert.assertEquals(titletext,enteredtitle);
+        Assert.assertEquals(titletext, enteredtitle);
 
         page.getter1().click();
         page.dsxGetTitleText().click();
 
-        Assert.assertEquals(page.result().getText(),"DSXGetTitleText : "+titletext);
+        Assert.assertEquals(page.result().getText(), "DSXGetTitleText : " + titletext);
     }
 
     @Test()
@@ -156,11 +157,11 @@ public class BaseTest extends FluentTestNg {
         String eneteredtext = page.textSubTitleEnable().getText();
         page.dsxSetSubTitleEnable().click();
         String subtitletext = page.title().getText();
-        Assert.assertEquals(subtitletext,"");
+        Assert.assertEquals(subtitletext, "");
 
         page.getter1().click();
         page.dsxGetSubTitleEnable().click();
-        Assert.assertEquals(page.result().getText(),eneteredtext);
+        Assert.assertEquals(page.result().getText(), eneteredtext);
 
 // Enable = true
 
@@ -170,12 +171,12 @@ public class BaseTest extends FluentTestNg {
         String eneteredtext2 = page.textTitleEnable().getText();
         page.dsxSetTitleEnable().click();
 
-        Assert.assertEquals(subtitletext,page.textSubTitleText().getText());
+        Assert.assertEquals(subtitletext, page.textSubTitleText().getText());
 
         page.getter1().click();
         page.dsxGetSubTitleEnable().click();
 
-        Assert.assertEquals(page.result().getText(),eneteredtext2);
+        Assert.assertEquals(page.result().getText(), eneteredtext2);
     }
 
     @Test()
@@ -190,12 +191,12 @@ public class BaseTest extends FluentTestNg {
         String enteredtitle = page.textSubTitleText().getAttribute("value");
         Thread.sleep(5000);
         String subtitletext = page.subtitle().getText();
-        Assert.assertEquals(subtitletext,enteredtitle);
+        Assert.assertEquals(subtitletext, enteredtitle);
 
         page.getter1().click();
         page.dsxGetTitleText().click();
 
-        Assert.assertEquals(page.result().getText(),"DSXGetTitleText : "+subtitletext);
+        Assert.assertEquals(page.result().getText(), "DSXGetTitleText : " + subtitletext);
     }
 
     @Test()
@@ -216,7 +217,7 @@ public class BaseTest extends FluentTestNg {
 
         page.getter1().click();
         page.dsxGetToolTipEnabled().click();
-        Assert.assertEquals(page.result().getText(),eneteredtext);
+        Assert.assertEquals(page.result().getText(), eneteredtext);
 
         // Enable = true
         page.textToolTipEnabled().clear();
@@ -227,14 +228,15 @@ public class BaseTest extends FluentTestNg {
         String tooltiptext = page.tooltipText().getText();
         System.out.println(tooltiptext);
 
-        Assert.assertEquals(tooltiptext,"Africa\\Non Renewable:\n" +
+        Assert.assertEquals(tooltiptext, "Africa\\Non Renewable:\n" +
                 "Number of Records 92");
 
         page.getter1().click();
         page.dsxGetToolTipEnabled().click();
         Thread.sleep(5000);
-        Assert.assertEquals(page.result().getText(),eneteredtext);
+        Assert.assertEquals(page.result().getText(), eneteredtext);
     }
+
     @Test()
     public void testToolTipNoOfDecimals() throws InterruptedException {
 
@@ -260,7 +262,7 @@ public class BaseTest extends FluentTestNg {
 
 
     @Test()
-    public void testTooltipValuePrefix()throws InterruptedException {
+    public void testTooltipValuePrefix() throws InterruptedException {
 
         goTo(VBIConfig.URL_PATH);
         page.setter1().click();
@@ -281,8 +283,8 @@ public class BaseTest extends FluentTestNg {
         String tooltiptext = page.tooltipText().getText();
         System.out.println(tooltiptext);
 
-        Assert.assertEquals(tooltiptext,"Africa\\Non Renewable:\n" +
-                "Number of Records "+enteredtext+ " 92");
+        Assert.assertEquals(tooltiptext, "Africa\\Non Renewable:\n" +
+                "Number of Records " + enteredtext + " 92");
 
 
     }
@@ -309,16 +311,17 @@ public class BaseTest extends FluentTestNg {
         String tooltiptext = page.tooltipText().getText();
         System.out.println(tooltiptext);
 
-        Assert.assertEquals(tooltiptext,"Africa\\Non Renewable:\n" +
-                "Number of Records 92 "+enteredtext);
+        Assert.assertEquals(tooltiptext, "Africa\\Non Renewable:\n" +
+                "Number of Records 92 " + enteredtext);
     }
 
     @Test()
-    public void testExportedFileName(){}
+    public void testExportedFileName() {
+    }
 
 
     @Test()
-    public void testDataLabelEnabled(){
+    public void testDataLabelEnabled() {
         goTo(VBIConfig.URL_PATH);
         // Enable = false
         page.setter1().click();
@@ -328,12 +331,12 @@ public class BaseTest extends FluentTestNg {
         String eneteredtext = page.textDataLabelEnabled().getText();
         page.dsxSetDataLabelEnabled().click();
         String datalabeltext = page.datalabelText().getText();
-        Assert.assertEquals(datalabeltext,"");
+        Assert.assertEquals(datalabeltext, "");
 
         page.getter1().click();
         page.dsxGetDataLabelEnabled().click();
 
-        Assert.assertEquals(page.result().getText(),eneteredtext);
+        Assert.assertEquals(page.result().getText(), eneteredtext);
 
 // Enable = true
 
@@ -342,14 +345,15 @@ public class BaseTest extends FluentTestNg {
         page.textDataLabelEnabled().sendKeys("true");
         page.dsxSetDataLabelEnabled().click();
 
-        Assert.assertEquals(datalabeltext,page.textDataLabelEnabled().getText());
+        Assert.assertEquals(datalabeltext, page.textDataLabelEnabled().getText());
 
         page.getter1().click();
         page.dsxGetDataLabelEnabled().click();
 
-        Assert.assertEquals(page.result().getText(),eneteredtext);
+        Assert.assertEquals(page.result().getText(), eneteredtext);
 
     }
+
     @Test()
     public void testDataLabelPrefix() throws InterruptedException {
 
@@ -372,14 +376,15 @@ public class BaseTest extends FluentTestNg {
         page.dsxSetDataLabelPrefix().click();
         Thread.sleep(5000);
         String datalabel_text2 = page.datalabelText().getText();
-        Assert.assertEquals(datalabel_text2,eneteredtext+" "+datalabel_text1);
+        Assert.assertEquals(datalabel_text2, eneteredtext + " " + datalabel_text1);
 
         page.getter1().click();
         page.dsxGetDataLabelPrefix().click();
         Thread.sleep(5000);
-        Assert.assertEquals(page.result().getText(),eneteredtext);
+        Assert.assertEquals(page.result().getText(), eneteredtext);
 
     }
+
     @Test()
     public void testDataLabelSuffix() throws InterruptedException {
 
@@ -396,19 +401,18 @@ public class BaseTest extends FluentTestNg {
         String datalabel_text1 = page.datalabelText().getText();
 
 
-
         page.textDataLabelSuffix().clear();
         page.textDataLabelSuffix().sendKeys("K");
         String eneteredtext = page.textDataLabelPrefix().getAttribute("value");
         page.dsxSetDataLabelSuffix().click();
         Thread.sleep(5000);
         String datalabel_text2 = page.datalabelText().getText();
-        Assert.assertEquals(datalabel_text2,datalabel_text1+" "+eneteredtext);
+        Assert.assertEquals(datalabel_text2, datalabel_text1 + " " + eneteredtext);
 
         page.getter1().click();
         page.dsxGetDataLabelSuffix().click();
         Thread.sleep(5000);
-        Assert.assertEquals(page.result().getText(),eneteredtext);
+        Assert.assertEquals(page.result().getText(), eneteredtext);
     }
 
     @Test()
@@ -424,12 +428,12 @@ public class BaseTest extends FluentTestNg {
         page.dsxSetXAxisLabelEnabled().click();
         Thread.sleep(5000);
         String xaxislabel_text = page.xaxislabelText().getText();
-        Assert.assertEquals(xaxislabel_text,"");
+        Assert.assertEquals(xaxislabel_text, "");
 
         page.getter1().click();
         page.dsxGetXAxisLabelEnabled().click();
         Thread.sleep(5000);
-        Assert.assertEquals(page.result().getText(),eneteredtext);
+        Assert.assertEquals(page.result().getText(), eneteredtext);
 
 // Enable = true
 
@@ -438,13 +442,13 @@ public class BaseTest extends FluentTestNg {
         page.textXAxisLabelEnabled().sendKeys("true");
         page.dsxSetXAxisLabelEnabled().click();
         Thread.sleep(5000);
-        Assert.assertEquals(xaxislabel_text,"Africa\\Non Renewable");
+        Assert.assertEquals(xaxislabel_text, "Africa\\Non Renewable");
 
         page.getter1().click();
         page.dsxGetXAxisLabelEnabled().click();
 
         Thread.sleep(5000);
-        Assert.assertEquals(page.result().getText(),eneteredtext);
+        Assert.assertEquals(page.result().getText(), eneteredtext);
     }
 
     @Test()
@@ -469,12 +473,12 @@ public class BaseTest extends FluentTestNg {
         page.dsxSetXAxisLabelPrefix().click();
         Thread.sleep(5000);
         String xaxislabel_text2 = page.xaxislabelText().getText();
-        Assert.assertEquals(xaxislabel_text2,eneteredtext+" "+xaxislabel_text1);
+        Assert.assertEquals(xaxislabel_text2, eneteredtext + " " + xaxislabel_text1);
 
         page.getter1().click();
         page.dsxGetXAxisLabelPrefix().click();
         Thread.sleep(5000);
-        Assert.assertEquals(page.result().getText(),eneteredtext);
+        Assert.assertEquals(page.result().getText(), eneteredtext);
     }
 
 
@@ -493,24 +497,23 @@ public class BaseTest extends FluentTestNg {
         String datalabel_text1 = page.datalabelText().getText();
 
 
-
         page.textDataLabelSuffix().clear();
         page.textDataLabelSuffix().sendKeys("K");
         String eneteredtext = page.textDataLabelPrefix().getAttribute("value");
         page.dsxSetDataLabelSuffix().click();
         Thread.sleep(5000);
         String datalabel_text2 = page.datalabelText().getText();
-        Assert.assertEquals(datalabel_text2,datalabel_text1+" "+eneteredtext);
+        Assert.assertEquals(datalabel_text2, datalabel_text1 + " " + eneteredtext);
 
         page.getter1().click();
         page.dsxGetDataLabelSuffix().click();
         Thread.sleep(5000);
-        Assert.assertEquals(page.result().getText(),eneteredtext);
+        Assert.assertEquals(page.result().getText(), eneteredtext);
 
     }
 
     @Test()
-    public void testXAxisTitleEnabled(){
+    public void testXAxisTitleEnabled() {
 
         goTo(VBIConfig.URL_PATH);
         // Enable = false
@@ -521,12 +524,12 @@ public class BaseTest extends FluentTestNg {
         String eneteredtext = page.textDataLabelEnabled().getText();
         page.dsxSetXAxisTitleEnabled().click();
         String xaxistitletext = page.xaxisTitle().getText();
-        Assert.assertEquals(xaxistitletext,"");
+        Assert.assertEquals(xaxistitletext, "");
 
         page.getter1().click();
         page.dsxGetXAxisTitleEnabled().click();
 
-        Assert.assertEquals(page.result().getText(),eneteredtext);
+        Assert.assertEquals(page.result().getText(), eneteredtext);
 
 // Enable = true
 
@@ -535,12 +538,12 @@ public class BaseTest extends FluentTestNg {
         page.textDataLabelEnabled().sendKeys("true");
         page.dsxSetDataLabelEnabled().click();
 
-        Assert.assertEquals(xaxistitletext,page.textDataLabelEnabled().getText());
+        Assert.assertEquals(xaxistitletext, page.textDataLabelEnabled().getText());
 
         page.getter1().click();
         page.dsxGetDataLabelEnabled().click();
 
-        Assert.assertEquals(page.result().getText(),eneteredtext);
+        Assert.assertEquals(page.result().getText(), eneteredtext);
     }
 
     @Test()
@@ -561,12 +564,12 @@ public class BaseTest extends FluentTestNg {
         String enteredtitle = page.textXAxisTitleText().getAttribute("value");
         Thread.sleep(5000);
         String xaixistitletext = page.xaxisTitle().getText();
-        Assert.assertEquals(xaixistitletext,enteredtitle);
+        Assert.assertEquals(xaixistitletext, enteredtitle);
 
         page.getter1().click();
         page.dsxGetTitleText().click();
 
-        Assert.assertEquals(page.result().getText(),"DSXGetTitleText : "+xaixistitletext);
+        Assert.assertEquals(page.result().getText(), "DSXGetTitleText : " + xaixistitletext);
     }
 
 
@@ -623,7 +626,8 @@ public class BaseTest extends FluentTestNg {
     }
 
     @Test()
-    public void testXAxisPlotLine(){}
+    public void testXAxisPlotLine() {
+    }
 
     @Test()
     public void testYAxisMinMax() throws InterruptedException {
@@ -641,25 +645,24 @@ public class BaseTest extends FluentTestNg {
 
         String eneteredYaxisMin = page.textYAxisMaximum().getText();
 
-        Assert.assertEquals(page.yaxisMinimum().getText(),eneteredYaxisMax);
-        Assert.assertEquals(page.yaxisMaximum().getText(),eneteredYaxisMin);
+        Assert.assertEquals(page.yaxisMinimum().getText(), eneteredYaxisMax);
+        Assert.assertEquals(page.yaxisMaximum().getText(), eneteredYaxisMin);
 
         page.getter1().click();
         page.dsxGetYaxisMaximum().click();
         Thread.sleep(5000);
-        Assert.assertEquals(page.result().getText(),eneteredYaxisMax);
+        Assert.assertEquals(page.result().getText(), eneteredYaxisMax);
 
         page.dsxGetYaxisMinimum().click();
         Thread.sleep(5000);
-        Assert.assertEquals(page.result().getText(),eneteredYaxisMin);
+        Assert.assertEquals(page.result().getText(), eneteredYaxisMin);
 
     }
 
 
     @Test()
-    public void testGroupingYaxisMinMax() throws InterruptedException {}
-
-
+    public void testGroupingYaxisMinMax() throws InterruptedException {
+    }
 
 
     @Test()
@@ -675,12 +678,12 @@ public class BaseTest extends FluentTestNg {
         page.dsxSetXAxisLabelEnabled().click();
         Thread.sleep(5000);
         String xaxislabel_text = page.xaxislabelText().getText();
-        Assert.assertEquals(xaxislabel_text,"");
+        Assert.assertEquals(xaxislabel_text, "");
 
         page.getter1().click();
         page.dsxGetXAxisLabelEnabled().click();
         Thread.sleep(5000);
-        Assert.assertEquals(page.result().getText(),eneteredtext);
+        Assert.assertEquals(page.result().getText(), eneteredtext);
 
 // Enable = true
 
@@ -689,13 +692,13 @@ public class BaseTest extends FluentTestNg {
         page.textXAxisLabelEnabled().sendKeys("true");
         page.dsxSetXAxisLabelEnabled().click();
         Thread.sleep(5000);
-        Assert.assertEquals(xaxislabel_text,"Africa\\Non Renewable");
+        Assert.assertEquals(xaxislabel_text, "Africa\\Non Renewable");
 
         page.getter1().click();
         page.dsxGetXAxisLabelEnabled().click();
 
         Thread.sleep(5000);
-        Assert.assertEquals(page.result().getText(),eneteredtext);
+        Assert.assertEquals(page.result().getText(), eneteredtext);
     }
 
     @Test()
@@ -720,12 +723,12 @@ public class BaseTest extends FluentTestNg {
         page.dsxSetXAxisLabelPrefix().click();
         Thread.sleep(5000);
         String xaxislabel_text2 = page.xaxislabelText().getText();
-        Assert.assertEquals(xaxislabel_text2,eneteredtext+" "+xaxislabel_text1);
+        Assert.assertEquals(xaxislabel_text2, eneteredtext + " " + xaxislabel_text1);
 
         page.getter1().click();
         page.dsxGetXAxisLabelPrefix().click();
         Thread.sleep(5000);
-        Assert.assertEquals(page.result().getText(),eneteredtext);
+        Assert.assertEquals(page.result().getText(), eneteredtext);
     }
 
 
@@ -744,24 +747,23 @@ public class BaseTest extends FluentTestNg {
         String datalabel_text1 = page.datalabelText().getText();
 
 
-
         page.textDataLabelSuffix().clear();
         page.textDataLabelSuffix().sendKeys("K");
         String eneteredtext = page.textDataLabelPrefix().getAttribute("value");
         page.dsxSetDataLabelSuffix().click();
         Thread.sleep(5000);
         String datalabel_text2 = page.datalabelText().getText();
-        Assert.assertEquals(datalabel_text2,datalabel_text1+" "+eneteredtext);
+        Assert.assertEquals(datalabel_text2, datalabel_text1 + " " + eneteredtext);
 
         page.getter1().click();
         page.dsxGetDataLabelSuffix().click();
         Thread.sleep(5000);
-        Assert.assertEquals(page.result().getText(),eneteredtext);
+        Assert.assertEquals(page.result().getText(), eneteredtext);
 
     }
 
     @Test()
-    public void testYAxisTitleEnabled(){
+    public void testYAxisTitleEnabled() {
 
         goTo(VBIConfig.URL_PATH);
         // Enable = false
@@ -772,12 +774,12 @@ public class BaseTest extends FluentTestNg {
         String eneteredtext = page.textDataLabelEnabled().getText();
         page.dsxSetXAxisTitleEnabled().click();
         String xaxistitletext = page.xaxisTitle().getText();
-        Assert.assertEquals(xaxistitletext,"");
+        Assert.assertEquals(xaxistitletext, "");
 
         page.getter1().click();
         page.dsxGetXAxisTitleEnabled().click();
 
-        Assert.assertEquals(page.result().getText(),eneteredtext);
+        Assert.assertEquals(page.result().getText(), eneteredtext);
 
 // Enable = true
 
@@ -786,12 +788,12 @@ public class BaseTest extends FluentTestNg {
         page.textDataLabelEnabled().sendKeys("true");
         page.dsxSetDataLabelEnabled().click();
 
-        Assert.assertEquals(xaxistitletext,page.textDataLabelEnabled().getText());
+        Assert.assertEquals(xaxistitletext, page.textDataLabelEnabled().getText());
 
         page.getter1().click();
         page.dsxGetDataLabelEnabled().click();
 
-        Assert.assertEquals(page.result().getText(),eneteredtext);
+        Assert.assertEquals(page.result().getText(), eneteredtext);
     }
 
     @Test()
@@ -812,29 +814,32 @@ public class BaseTest extends FluentTestNg {
         String enteredtitle = page.textXAxisTitleText().getAttribute("value");
         Thread.sleep(5000);
         String xaixistitletext = page.xaxisTitle().getText();
-        Assert.assertEquals(xaixistitletext,enteredtitle);
+        Assert.assertEquals(xaixistitletext, enteredtitle);
 
         page.getter1().click();
         page.dsxGetTitleText().click();
 
-        Assert.assertEquals(page.result().getText(),"DSXGetTitleText : "+xaixistitletext);}
+        Assert.assertEquals(page.result().getText(), "DSXGetTitleText : " + xaixistitletext);
+    }
 
 
     @Test()
-    public void testYAxisPlotBand(){
-
+    public void testYAxisPlotBand() {
 
 
     }
 
     @Test()
-    public void testYAxisPlotLine(){}
+    public void testYAxisPlotLine() {
+    }
 
     @Test()
-    public void testThousandSeparator(){}
+    public void testThousandSeparator() {
+    }
 
     @Test()
-    public void testDecimalSeparator(){}
+    public void testDecimalSeparator() {
+    }
 
     @Test()
     public void testDataLabelNoOfDecimals() throws InterruptedException {
@@ -861,7 +866,7 @@ public class BaseTest extends FluentTestNg {
         Thread.sleep(5000);
         String Result_Text = page.result().getText();
         System.out.println(Result_Text);
-        Assert.assertEquals(Result_Text,"DSXGetDataLabelNoOfDecimals : " + decimalPlaces);
+        Assert.assertEquals(Result_Text, "DSXGetDataLabelNoOfDecimals : " + decimalPlaces);
     }
 
 }

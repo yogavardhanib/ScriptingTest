@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efad5166-2a5c-412c-ae21-b958e658ab79" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ScriptingTest.iml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/visualbi/BaseTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/visualbi/BaseTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ScriptingTest.iml" afterPath="$PROJECT_DIR$/ScriptingTest.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/visualbi/BaseTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/visualbi/BaseTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,11 +24,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="FileInputStream.java" pinned="false" current-in-tab="false">
+        <entry file="jar:$PROJECT_DIR$/../../../../../..//C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/io/FileInputStream.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="109">
+              <caret line="218" column="23" lean-forward="false" selection-start-line="218" selection-start-column="23" selection-end-line="218" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="BaseTest.java" pinned="false" current-in-tab="true">
         <entry file="file:$PROJECT_DIR$/../../../../../..//$PROJECT_DIR$/src/test/java/com/visualbi/BaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="556">
-              <caret line="81" column="85" lean-forward="false" selection-start-line="81" selection-start-column="85" selection-end-line="81" selection-end-column="85" />
+            <state relative-caret-position="153">
+              <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -42,6 +52,13 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>SetTitleText</find>
+      <find>TitleText</find>
+      <find>setterT</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -89,9 +106,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -150,6 +164,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -157,7 +174,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="TestNG.BaseTest.testChartType">
+  <component name="RunManager" selected="TestNG.BaseTest.testTitleEnable">
     <configuration default="false" name="BaseTest.testChartType" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -172,6 +189,39 @@
       <option name="PACKAGE_NAME" value="com.visualbi" />
       <option name="MAIN_CLASS_NAME" value="com.visualbi.BaseTest" />
       <option name="METHOD_NAME" value="testChartType" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="false" name="BaseTest.testTitleEnable" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.visualbi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="ScriptingTest" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="com.visualbi" />
+      <option name="MAIN_CLASS_NAME" value="com.visualbi.BaseTest" />
+      <option name="METHOD_NAME" value="testTitleEnable" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -395,12 +445,14 @@
       <listeners />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="TestNG.BaseTest.testChartType" />
+      <item index="1" class="java.lang.String" itemvalue="TestNG.BaseTest.testTitleEnable" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.BaseTest.testChartType" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="TestNG.BaseTest.testTitleEnable" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.BaseTest.testChartType" />
       </list>
     </recent_temporary>
   </component>
@@ -418,30 +470,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BaseTest_testChartType - 2017.11.29 at 06h 19m 49s.xml">
-      <configuration name="BaseTest.testChartType" configurationId="TestNG" />
+    <history-entry file="BaseTest_testTitleEnable - 2017.11.29 at 06h 43m 10s.xml">
+      <configuration name="BaseTest.testTitleEnable" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="BaseTest_testChartType - 2017.11.29 at 06h 20m 14s.xml">
-      <configuration name="BaseTest.testChartType" configurationId="TestNG" />
+    <history-entry file="BaseTest_testTitleEnable - 2017.11.29 at 06h 44m 04s.xml">
+      <configuration name="BaseTest.testTitleEnable" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="BaseTest_testChartType - 2017.11.29 at 06h 21m 54s.xml">
-      <configuration name="BaseTest.testChartType" configurationId="TestNG" />
+    <history-entry file="BaseTest_testTitleEnable - 2017.11.29 at 06h 45m 55s.xml">
+      <configuration name="BaseTest.testTitleEnable" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="BaseTest_testChartType - 2017.11.29 at 06h 23m 40s.xml">
-      <configuration name="BaseTest.testChartType" configurationId="TestNG" />
+    <history-entry file="BaseTest_testTitleEnable - 2017.11.29 at 06h 46m 10s.xml">
+      <configuration name="BaseTest.testTitleEnable" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="BaseTest_testChartType - 2017.11.29 at 06h 25m 46s.xml">
-      <configuration name="BaseTest.testChartType" configurationId="TestNG" />
+    <history-entry file="BaseTest_testTitleEnable - 2017.11.29 at 06h 47m 03s.xml">
+      <configuration name="BaseTest.testTitleEnable" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="BaseTest_testChartType - 2017.11.29 at 06h 29m 15s.xml">
-      <configuration name="BaseTest.testChartType" configurationId="TestNG" />
+    <history-entry file="BaseTest_testTitleEnable - 2017.11.29 at 06h 47m 13s.xml">
+      <configuration name="BaseTest.testTitleEnable" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="BaseTest_testChartType - 2017.11.29 at 06h 31m 22s.xml">
-      <configuration name="BaseTest.testChartType" configurationId="TestNG" />
+    <history-entry file="BaseTest_testTitleEnable - 2017.11.30 at 02h 40m 59s.xml">
+      <configuration name="BaseTest.testTitleEnable" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="BaseTest_testTitleEnable - 2017.11.30 at 02h 43m 00s.xml">
+      <configuration name="BaseTest.testTitleEnable" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="BaseTest_testTitleEnable - 2017.11.30 at 02h 46m 08s.xml">
+      <configuration name="BaseTest.testTitleEnable" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="BaseTest_testTitleEnable - 2017.11.30 at 02h 49m 14s.xml">
+      <configuration name="BaseTest.testTitleEnable" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="1" width="1358" height="726" extended-state="0" />
+    <frame x="1" y="1" width="1358" height="726" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -454,18 +515,18 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32715008" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37436762" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25346687" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25731894" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39966273" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -478,7 +539,17 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file:$PROJECT_DIR$/../../../../../..////VM-FILE/Profiles/yogavb/Documents/GitHub/ScriptingTest/src/test/java/com/visualbi/BaseTest.java</url>
+          <line>116</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -486,14 +557,32 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="jar:$PROJECT_DIR$/../../../../../..//C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/io/FileInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file:$PROJECT_DIR$/../../../../../../VM-FILE/Profiles/yogavb/Documents/GitHub/ScriptingTest/pom.xml" />
     <entry file="file:$PROJECT_DIR$/../../../../../../VM-FILE/Profiles/yogavb/Documents/GitHub/ScriptingTest/src/main/java/com/visualbi/HighChartsPage.java" />
     <entry file="file:$PROJECT_DIR$/../../../../../../VM-FILE/Profiles/yogavb/Documents/GitHub/ScriptingTest/src/main/java/com/visualbi/VBIConfig.java" />
     <entry file="file:$PROJECT_DIR$/../../../../../../VM-FILE/Profiles/yogavb/Documents/GitHub/ScriptingTest/src/test/java/com/visualbi/BaseTest.java" />
+    <entry file="file:$PROJECT_DIR$/../../../../../../VM-FILE/Profiles/yogavb/Documents/GitHub/ScriptingTest/src/main/java/com/visualbi/HighChartsPage.java" />
+    <entry file="jar:$PROJECT_DIR$/../../../../../..//C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/io/FileInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="218" column="23" lean-forward="false" selection-start-line="218" selection-start-column="23" selection-end-line="218" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:$PROJECT_DIR$/../../../../../../VM-FILE/Profiles/yogavb/Documents/GitHub/ScriptingTest/src/test/java/com/visualbi/BaseTest.java" />
     <entry file="file:$PROJECT_DIR$/../../../../../..//$PROJECT_DIR$/src/test/java/com/visualbi/BaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="81" column="85" lean-forward="false" selection-start-line="81" selection-start-column="85" selection-end-line="81" selection-end-column="85" />
+        <state relative-caret-position="153">
+          <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
           <folding />
         </state>
       </provider>

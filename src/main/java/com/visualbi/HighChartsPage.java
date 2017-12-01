@@ -655,7 +655,7 @@ public class HighChartsPage extends FluentPage {
         return ChartTitle;
     }
 
-    @FindBy(css = ".highcharts-title")
+    @FindBy(css = ".highcharts-subtitle")
     protected WebElement ChartSubTitle;
 
     public WebElement subtitle() {

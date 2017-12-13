@@ -6,7 +6,7 @@ package com.visualbi;
 public class VBIConfig {
 
     public static String sdkVersion ="2.10";
-    public static String buildNo ="VBISuite-2.20.0.qualifier";
+    public static String buildNo ="VBISuite-2.20.0.qualifier(421)";
     public static String designstudioPortNumber ="8110";
     public static String applicationName = "LINECHART";
     public static String testMode ="local";

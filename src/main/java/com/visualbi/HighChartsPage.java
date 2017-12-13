@@ -10,11 +10,39 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
+import java.util.Iterator;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 @Wait(timeout = 50, timeUnit = TimeUnit.SECONDS)
 public class HighChartsPage extends FluentPage {
+
+   //Pages
+
+    @FindBy(css = "#PAGE_1_tf1 .sapMBtn")
+    protected List<WebElement> Page1_Buttons;
+
+    public List<WebElement> page1_Buttons() {
+        return Page1_Buttons;
+    }
+
+    @FindBy(css = "#PAGE_2_tf1 .sapMBtn")
+    protected List<WebElement> Page2_Buttons;
+
+    public List<WebElement> page2_Buttons() {
+        return Page2_Buttons;
+    }
+
+  //setter page
+    @FindBy(css = "#PAGE_3_tf1 .sapMInputBaseInner")
+    protected List<WebElement> S_Page3_Text;
+
+    public List<WebElement> S_page3_Text() {
+        return S_Page3_Text;
+    }
+
 
     //  getter
 
@@ -690,11 +718,18 @@ public class HighChartsPage extends FluentPage {
         return DataLabelText;
     }
 
-    @FindBy(css=".highcharts-axis-labels.highcharts-xaxis-labels >text:nth-child(1)")
+    @FindBy(css=".highcharts-axis-labels.highcharts-xaxis-labels >text:nth-child(1) >title")
     protected WebElement XaxisLabelText;
 
     public WebElement xaxislabelText() {
         return XaxisLabelText;
+    }
+
+    @FindBy(css=".highcharts-axis-labels.highcharts-yaxis-labels >text:nth-child(1)")
+    protected WebElement YaxisLabelText;
+
+    public WebElement yaxislabelText() {
+        return YaxisLabelText;
     }
 
     @FindBy(css=".highcharts-xaxis .highcharts-axis-title")
@@ -723,6 +758,13 @@ public class HighChartsPage extends FluentPage {
 
     public WebElement plotband() {
         return PlotBand;
+    }
+
+    @FindBy(css="highcharts-plot-lines-5")
+    protected WebElement PlotLine;
+
+    public WebElement plotline() {
+        return PlotLine;
     }
 
     //SetterButtons
@@ -769,7 +811,7 @@ public class HighChartsPage extends FluentPage {
         return DSXSetToolTipEnabled;
     }
 
-    @FindBy(id = "BUTTON_83_button-content.sapMBtnContent")
+    @FindBy(id = "BUTTON_83_button-content")
     protected WebElement DSXSetToolTipNoOfDecimals;
 
     public WebElement dsxSetToolTipNoOfDecimals() {
@@ -1024,6 +1066,4 @@ public class HighChartsPage extends FluentPage {
 
 
 
-
-
-}
+   }
